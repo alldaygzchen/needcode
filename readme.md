@@ -123,7 +123,7 @@ from sortedcontainers import SortedDict
 9. Percolating up and down the end of the list satisfies the structure and order property
 10. heapify: creating heap there are n elements:O(nlog(n)), however using heapify from input array cost O(n) [Percolating down is more efficient since less number node from the top should execute]
 11. we can also use heap to sort array since remove is O(log(n)) thus O(nlog(n))
-12. heaps disadvantage: search ,heap advantage: sort and min/max search
+12. heaps disadvantage: search, heap advantage: sort and min/max search
 
 # Hashing
 
@@ -135,3 +135,15 @@ from sortedcontainers import SortedDict
 5. Also we can change the value to linked list = to decrease collision
 6. Another solution is open addressing (find the next available to push the object)
 7. prime number is a better solution for hashmap length
+
+# Graphs
+
+1. Vertices == node, edges==connection
+2. Number of vertices\*\*2 &ge; number of edges
+3. Directed graph: edges have direction e.g. tree, linked list
+4. Ways of representing graphs: matrix, adjacency matrix, adjacency list
+5. Matrix [undirected edge]: 0 is node, 1, is blocked
+6. Adjacency Matrix [directed edge]: index represent nodes, the value ==1 means edge exists
+7. Adjancecy list: create graph node class with property neighbor (less space complexity than adjacency matrix)
+8. Matrix Dfs: time complexity O(4^(n\*m)), space complexity:O(n\*m)
+9. two methods for matrix dfs: traversal and divide and conquer

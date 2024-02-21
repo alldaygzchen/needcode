@@ -1,8 +1,5 @@
 # not done
 # basic algo
-hash implementation
-design tree maps
-intro to graphs
 matrix dfs
 matrix bfs
 adjacent list
