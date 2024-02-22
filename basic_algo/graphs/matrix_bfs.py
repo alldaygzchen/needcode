@@ -1,5 +1,5 @@
-# BFS(O(m*n)) DFS(O(4^m*n))
-# shortest path
+# BFS(O(4*m*n)) DFS(O(4^m*n))
+# Find the shortest path
 
 from collections import deque
 grid = [[0, 0, 0, 0],
@@ -64,31 +64,32 @@ def dfs_traversal(grid, r, c,visit,path_length,min_path_length):
 
     visit.remove((r, c))
 
-# def dfs_divide_conquer(grid, r, c, visit,path_length,min_path_length):
-#     ROWS, COLS = len(grid), len(grid[0])
-#     if (min(r, c) < 0 or
-#         r == ROWS or c == COLS or
-#         (r, c) in visit or grid[r][c] == 1):
-#         return 0
-#     if r == ROWS - 1 and c == COLS - 1:
-#         return 1
+def dfs_divide_conquer(grid, r, c, visit,path_length,min_path_length):
+    ROWS, COLS = len(grid), len(grid[0])
+    if (min(r, c) < 0 or
+        r == ROWS or c == COLS or
+        (r, c) in visit or grid[r][c] == 1):
+        return float('inf')
+    if r == ROWS - 1 and c == COLS - 1:
+        return path_length
 
-#     visit.add((r, c))
+    visit.add((r, c))
 
 
-#     min(min_path_length[0],dfs_divide_conquer(grid, r + 1, c, visit,path_length,min_path_length)+1)
-#     min(min_path_length[0],dfs_divide_conquer(grid, r - 1, c, visit,path_length,min_path_length)+1)
-#     min(min_path_length[0],dfs_divide_conquer(grid, r, c + 1, visit,path_length,min_path_length)+1)
-#     min(min_path_length[0],dfs_divide_conquer(grid, r, c - 1, visit,path_length,min_path_length)+1)
+    shortest_path = min(
+        dfs_divide_conquer(grid, r + 1, c, visit,path_length,min_path_length)+1,
+        dfs_divide_conquer(grid, r - 1, c, visit,path_length,min_path_length)+1,
+        dfs_divide_conquer(grid, r, c + 1, visit,path_length,min_path_length)+1,
+        dfs_divide_conquer(grid, r, c - 1, visit,path_length,min_path_length)+1
+    )
 
-#     visit.remove((r, c))
-#     return count
+    visit.remove((r, c))
+    return shortest_path
 
 if __name__=="__main__":
-    print(bfs(grid))
+    print('bfs', bfs(grid))
     min_path_length_traversal= [float('inf')]
     dfs_traversal(grid, 0, 0,set(),0,min_path_length_traversal)
-    print(min_path_length_traversal[0])
-
-    # min_path_length_divide_conquer= [float('inf')]
-    # dfs_divide_conquer(grid, 0, 0,set(),0,min_path_length_divide_conquer)
+    print('dfs_traversal',min_path_length_traversal[0])
+    min_path_length_divide_conquer= [float('inf')]
+    print('dfs_divide_conquer',dfs_divide_conquer(grid, 0, 0,set(),0,min_path_length_divide_conquer))
