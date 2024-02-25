@@ -4,6 +4,7 @@ grid = [[0, 0, 0, 0],
         [0, 1, 0, 0]]
 
 # Count paths (backtracking)(divide and conquer)
+#(O(4^m*n))
 def dfs_divide_conquer(grid, r, c, visit):
     ROWS, COLS = len(grid), len(grid[0])
     if (min(r, c) < 0 or

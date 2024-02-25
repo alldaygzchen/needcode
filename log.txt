@@ -1,8 +1,6 @@
 # not done
 # basic algo
-matrix dfs
-matrix bfs
-adjacent list
+
 dp1
 dp2
 bit

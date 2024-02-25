@@ -1,3 +1,5 @@
+https://docs.google.com/spreadsheets/d/1Z6BECY1EIo3ZLYON8f-YlHwo_QAH1yApBUlu8Qs11i8/edit#gid=0
+
 # Arrays (Implement Stack):
 
 1. 1 byte = 8bits (e.g. 00000001)
@@ -147,3 +149,17 @@ from sortedcontainers import SortedDict
 7. Adjancecy list: create graph node class with property neighbor (less space complexity than adjacency matrix)
 8. Matrix Dfs: time complexity O(4^(n\*m)), space complexity:O(n\*m)
 9. two methods for matrix dfs: traversal and divide and conquer
+10. bfs has better time complexity since it does not duplicate unnecessary steps
+
+# dynamic programming
+
+1. memoization search can be only used in dfs divide and conquer not dfs traversal
+2. dynamic programming have a better time complexity than memoization
+3. all dynamic programming call be transfer to memoization
+4. memoization is more suitable for more complex problems
+5. overall, dfs traversal seems to have the worst time complexity
+6. my leetcode thought: consider step by step (recursion traversal) or loop e.g.needcode/basic_algo/recursion/fibonacci.py
+7. my leetcode thought: consider if not dfs traversal then dfs divide and conquer
+8. my leetcode thought: consider 1.dfs divide and conquer 2.dfs memoization,3.dp
+9. 2:44
+10.
