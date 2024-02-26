@@ -40,17 +40,16 @@ def countpath_dp(rows,cols):
 
     while True:
 
-        # if row_id==-1:
-        #     return prevRow[0]
-        if row_id>=0:
-            curRow = [0]*cols
-            curRow[cols-1] =1
-            for c in range(cols-2,-1,-1):
-                curRow[c] = curRow[c+1] +prevRow[c]
-            prevRow=curRow
-            row_id -=1
-            continue
-        return prevRow[0]
+        if row_id==-1:
+            return prevRow[0]
+ 
+        curRow = [0]*cols
+        curRow[cols-1] =1
+        for c in range(cols-2,-1,-1):
+            curRow[c] = curRow[c+1] +prevRow[c]
+        prevRow=curRow
+        row_id -=1
+
 
 
 

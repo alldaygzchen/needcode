@@ -29,15 +29,15 @@ def fibonacci_dp(n):
         if n <=1:
             return cache[n]
 
-        if i<=n:
+        if i==n+1:
+            return cache[1]
 
-            tmp = cache[0]
-            cache[0] =cache[1]
-            cache[1]=tmp+cache[1]
-            i+=1
-            continue
 
-        return cache[1]
+        tmp = cache[0]
+        cache[0] =cache[1]
+        cache[1]=tmp+cache[1]
+        i+=1
+
 
 # def fibonacci_dp(n):
     
