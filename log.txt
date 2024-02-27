@@ -1,7 +1,4 @@
 # not done
-# basic algo
-
-dp1
 dp2
 bit
 # advance algo

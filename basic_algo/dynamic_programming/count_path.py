@@ -13,7 +13,7 @@ def countpath_divide_conquer(r,c,rows,cols):
 
     return countpath_divide_conquer(r+1,c,rows,cols)+countpath_divide_conquer(r,c+1,rows,cols)
     
-#  O(n*m)
+#  time:O(n*m) space:O(m)
 def countpath_memoization(r,c,rows,cols,cache):
 
     
@@ -31,7 +31,7 @@ def countpath_memoization(r,c,rows,cols,cache):
 
     return countpath_memoization(r+1,c,rows,cols,cache)+countpath_memoization(r,c+1,rows,cols,cache)
 
-#  O(n*m)
+#  time:O(n*m) space:O(m)
 def countpath_dp(rows,cols):
     
     prevRow = [1]*cols

@@ -161,5 +161,9 @@ from sortedcontainers import SortedDict
 6. my leetcode thought: consider step by step (recursion traversal) or loop e.g.needcode/basic_algo/recursion/fibonacci.py
 7. my leetcode thought: consider if not dfs traversal then dfs divide and conquer
 8. my leetcode thought: consider 1.dfs divide and conquer 2.dfs memoization,3.dp
-9. 2:44
-10.
+
+# bit manipulation
+
+1. base 10 (2)vs base 2 (...000010)e.g. 2
+2. 23&1 => 10111& 00001=> 00001
+3. <<1 : shift left by one place (multiply current value with 2 )
