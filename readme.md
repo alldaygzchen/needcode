@@ -30,6 +30,10 @@ https://docs.google.com/spreadsheets/d/1Z6BECY1EIo3ZLYON8f-YlHwo_QAH1yApBUlu8Qs1
    - Insert/Remove element (assuming having reference node[head or tail]) <=> O(1)
    - Insert/Remove middle (assuming having reference node[head or tail]) <=>O(1)
 
+# Advance Linked Lists
+
+1. Fast and Slow Pointer
+
 # Queues
 
 1. First In First Out
@@ -112,6 +116,11 @@ from sortedcontainers import SortedDict
 3. trees are mostly divide and conquer problem, thus using recursion is suitable
 4. check the root head before recursion
 
+# Advance Backtracking
+
+1. subsets and combinations are quite same but adding constriction
+2. commonly subset and combination pattern is to add current element and move foward
+
 # Heap and Priority Queue(it is not binary search tree) (swap like array)
 
 1. linked list create queue. binary heap creates priority queue
@@ -151,19 +160,23 @@ from sortedcontainers import SortedDict
 9. two methods for matrix dfs: traversal and divide and conquer
 10. bfs has better time complexity since it does not duplicate unnecessary steps
 
-# dynamic programming
+# Dynamic programming
 
 1. memoization search can be only used in dfs divide and conquer not dfs traversal
 2. dynamic programming have a better time complexity than memoization
 3. all dynamic programming call be transfer to memoization
 4. memoization is more suitable for more complex problems
-5. overall, dfs traversal seems to have the worst time complexity
-6. my leetcode thought: consider step by step (recursion traversal) or loop e.g.needcode/basic_algo/recursion/fibonacci.py
-7. my leetcode thought: consider if not dfs traversal then dfs divide and conquer
-8. my leetcode thought: consider 1.dfs divide and conquer 2.dfs memoization,3.dp
+5. overall, dfs backtracking seems to have the worst time complexity
 
-# bit manipulation
+# Bit manipulation
 
 1. base 10 (2)vs base 2 (...000010)e.g. 2
 2. 23&1 => 10111& 00001=> 00001
 3. <<1 : shift left by one place (multiply current value with 2 )
+
+# Leetcode thought:
+
+1. consider step to step or recursive
+2. if recursive, consider a backtracking [exploring all solutions] or divide and conquer[overlapping subproblems] (since it is dfs, create the base case)
+3. if divide and conquer, consider the divide and conquer adding memoization or dp
+4. if dp, solve the problem step to step by cache (use swap to replace) and create an ending condition (the ending condition is not the base case)

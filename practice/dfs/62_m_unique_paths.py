@@ -1,22 +1,22 @@
 class Solution:
+    # dfs memoization
     def uniquePaths(self, m: int, n: int) -> int:
         self.m =m 
         self.n =n
-        self.cache = [1]*(n)
-        r = m-2
+        self.cache = [[None]*(n) for _ in range(m)]
+        return self.helper(0,0)
+
+    def helper(self,r,c):
         
-        while True:
-
-            if r==-1:
-                return self.cache[0]
-            curRow = [None]*n
-            curRow[-1]=1
-            for c in range(n-2,-1,-1):
-                curRow[c] = self.cache[c]+curRow[c+1]
-
-            self.cache = curRow
-            r-=1
-
+        if r==self.m-1 and c==self.n-1:
+            return 1
+        if r==self.m or c == self.n:
+            return 0
+        
+        if self.cache[r][c]:
+            return self.cache[r][c]
+        
+        return self.helper(r+1,c)+self.helper(r,c+1)
 
 if __name__=="__main__":   
     s = Solution()

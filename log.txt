@@ -1,4 +1,20 @@
 # not done
-dp2
-bit
+ongoing: 
+permutaion df solution
+permutations 2
 # advance algo
+linked kist
+trie
+union find
+segement tree
+iterative dfs
+two heaps
+permutations
+dijkstra 
+prim 
+kruskal 
+topological sort
+0/1 knapsack
+unbounded knapsack
+lcs
+palindromes
