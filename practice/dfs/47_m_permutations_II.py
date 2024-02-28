@@ -1,5 +1,5 @@
 """
-Given a list of nums with elements (not all distinxr), return all possible permutations
+Given a list of nums with elements (not all distinct), return all possible permutations
 """
 """
 explore all the solutions, we use backtracking
@@ -14,13 +14,12 @@ from typing import List
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         self.nums = sorted(nums)
+        self.visited = [False] * len(nums)
         self.sets = []
-        # self.visited = {}
         self.helper([])
         return self.sets
     def helper(self,cur_set):
-
-        print('cur_set',cur_set)
+        # print('cur_set',cur_set)
 
         """
             add the current val to the current_set and define next_val
@@ -30,20 +29,16 @@ class Solution:
         if len(cur_set) == len(self.nums):
             self.sets.append(cur_set.copy())
             return
-        
+
         for i in range(len(self.nums)):
-            # print('start',i)
+            if self.visited[i] or (i > 0 and self.nums[i] == self.nums[i - 1] and not self.visited[i - 1]):
+                continue
+            self.visited[i] = True
+            cur_set.append(self.nums[i])
+            self.helper(cur_set)
+            cur_set.pop()
+            self.visited[i] = False
 
-            if self.nums[i] not in cur_set:
-                
-                while i+1!= len(self.nums) and self.nums[i]==self.nums[i+1]:
-                    # print('i',i)
-                    i+=1
-
-
-                cur_set.append(self.nums[i+1])
-                self.helper(cur_set)
-                cur_set.pop()
 
 
 if __name__=="__main__":
