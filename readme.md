@@ -32,7 +32,11 @@ https://docs.google.com/spreadsheets/d/1Z6BECY1EIo3ZLYON8f-YlHwo_QAH1yApBUlu8Qs1
 
 # Advance Linked Lists
 
-1. Fast and Slow Pointer
+1. Fast and Slow Pointer :
+
+- Find the middle of a linked list. (if the length is even, fast pointer will be at len(arr) and slow pointer will be at the larger middle point)
+- Determine if a Linked List has a cycle. (Using hash set need additional complexity)
+- Determine if a Linked List has a cycle and return the head. (need mathematical proof)
 
 # Queues
 
