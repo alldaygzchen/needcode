@@ -20,14 +20,12 @@ class Solution:
 
         # get cycle start 
         slow2 = 0
-        idx = 0 
         while True:
 
-            if slow == slow2 and idx!=0:
+            if slow == slow2:
                 return slow
             slow = nums[slow]
             slow2 = nums[slow2]
-            idx+=1
 
 if __name__=="__main__":
     s= Solution()
