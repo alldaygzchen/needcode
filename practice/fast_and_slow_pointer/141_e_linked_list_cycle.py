@@ -7,7 +7,7 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        slow =head
+        slow = head
         fast = head
         idx = 0
 
@@ -35,10 +35,12 @@ if __name__=="__main__":
     l1.next = l2
     l2.next = l3
     l3.next = l4
+    l4.next =l2
     print(s.hasCycle(l1)) #1
     l1 = ListNode(1) 
     l2 = ListNode(2)
     l1.next = l2
+    l2.next = l1
     print(s.hasCycle(l1)) #0
     l1 = ListNode(1) 
     print(s.hasCycle(l1)) #-1
