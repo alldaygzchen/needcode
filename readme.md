@@ -91,6 +91,19 @@ https://docs.google.com/spreadsheets/d/1Z6BECY1EIo3ZLYON8f-YlHwo_QAH1yApBUlu8Qs1
 
 1. inserting and deleting in binary tree is O(logn)
 
+# Advance trees algorithm
+
+## Trie (prefix tree)
+
+1. insert word: O(n) [the word has n character] (this can be done by hashmap)
+2. search word: O(n) [the word has n character] (this can be done by hashmap)
+3. search prefix: O(n)
+4. A trie is a tree with each node a character with no value in root node and no redundant node
+
+## Union Find
+
+1.
+
 # Depth First Search:
 
 1. bst traversal is inorder (left->node->right), time complexity:O(n)
