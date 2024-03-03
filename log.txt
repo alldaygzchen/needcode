@@ -3,7 +3,7 @@ ongoing:
 
 # advance algo
 
-union find and dfs solution
+and dfs solution
 segement tree
 iterative dfs
 two heaps
