@@ -1,11 +1,9 @@
 # not done
 ongoing: 
-permutaion df solution
-permutations 2
+
 # advance algo
-linked kist
-trie
-union find
+
+union find and dfs solution
 segement tree
 iterative dfs
 two heaps

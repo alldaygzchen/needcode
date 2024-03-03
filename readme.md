@@ -102,7 +102,7 @@ https://docs.google.com/spreadsheets/d/1Z6BECY1EIo3ZLYON8f-YlHwo_QAH1yApBUlu8Qs1
 
 ## Union Find
 
-1.
+1. union: since both have a path to the root, the children is connected
 
 # Depth First Search:
 
