@@ -1,4 +1,10 @@
 from typing import List
+"""
+1. prev = 0 => bool:false
+2. set is not sorted
+3. set cannot use pointer (for loop)
+
+"""
 class Solution:
 
     def longestConsecutive(self, nums: List[int]) -> int:
@@ -7,28 +13,50 @@ class Solution:
         l = 0
         r = 0
         prev = None
-        nums = sorted(set(nums))
-        print('nums',nums)
+        nums = set(nums)
         max_length = 0
+        curr_length = 0
+        print('nums',nums)
+
+        for num in nums:
+
+            if num-1 in nums:
+                continue
+
+            curr_length = 0
+
+            while num in nums:
+                num+=1
+                curr_length +=1
+                max_length = max(curr_length,max_length)
+
+        return max_length
+            
+# class Solution:
+
+#     def longestConsecutive(self, nums: List[int]) -> int:
+        
+#         # prepare
+#         l = 0
+#         r = 0
+#         prev = None
+#         nums = sorted(set(nums))
+#         # print('nums',nums)
+#         max_length = 0
         
 
-        while True:
-            # print('#######')
-            # print('prev:',prev,'prev_max_length',max_length)
-            # print('nums[l]:',nums[l],'nums[r]:',nums[r])
-
-            if r == len(nums):
-                return max_length
+#         while True:
+#             if r == len(nums):
+#                 return max_length
             
-            if prev is not None  and prev+1!=nums[r]:
-                # max_length = max(r-1-l+1,max_length)
-                prev = nums[r]
-                l=r
-                r+=1
-                continue
-            max_length = max(r-l+1,max_length)
-            prev = nums[r]
-            r+=1
+#             if prev is not None  and prev+1!=nums[r]:
+#                 prev = nums[r]
+#                 l=r
+#                 r+=1
+#                 continue
+#             max_length = max(r-l+1,max_length)
+#             prev = nums[r]
+#             r+=1
             
     
 if __name__=="__main__":
