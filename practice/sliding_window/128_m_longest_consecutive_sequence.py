@@ -58,16 +58,19 @@ class Solution:
 
     def longestConsecutive(self, nums: List[int]) -> int:
         
+        if not nums:
+            return 0
+
         # prepare
         l = 0
         r = 1
-        prev = nums[l]
         nums = sorted(set(nums))
-        # print('nums',nums)
-        max_length = 0
+        prev = nums[0]
+        max_length = 1
         
 
         while True:
+
             if r == len(nums):
                 return max_length
             
@@ -76,6 +79,7 @@ class Solution:
                 l=r
                 r+=1
                 continue
+            
             max_length = max(r-l+1,max_length)
             prev = nums[r]
             r+=1
