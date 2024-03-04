@@ -104,6 +104,13 @@ https://docs.google.com/spreadsheets/d/1Z6BECY1EIo3ZLYON8f-YlHwo_QAH1yApBUlu8Qs1
 
 1. union: since both have a path to the root, the children is connected
 
+## Segment Tree
+
+1. find the middle and split in two half [0,M] [M+1,len(arr)-1], where [] is a closed set
+2. update O(logn) and queryRange O(4log(n)) [prefix sum with array, the prefix need to be calculated if it is updated ]
+3. update, build, rangeQuery are all divide and conquer
+4. we store the value in the segment node for cache, so there is no need to go to the end
+
 # Depth First Search:
 
 1. bst traversal is inorder (left->node->right), time complexity:O(n)

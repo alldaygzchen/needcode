@@ -5,33 +5,29 @@ from typing import List
 3. set cannot use pointer (for loop)
 
 """
-class Solution:
+# class Solution:
 
-    def longestConsecutive(self, nums: List[int]) -> int:
+#     def longestConsecutive(self, nums: List[int]) -> int:
         
-        # prepare
-        l = 0
-        r = 0
-        prev = None
-        nums = set(nums)
-        max_length = 0
-        curr_length = 0
-        print('nums',nums)
+#         # prepare
+#         nums = set(nums)
+#         max_length = 0
+#         curr_length = 0
 
-        for num in nums:
+#         for num in nums:
 
-            if num-1 in nums:
-                continue
+#             if num-1 in nums:
+#                 continue
 
-            curr_length = 0
+#             curr_length = 0
 
-            while num in nums:
-                num+=1
-                curr_length +=1
-                max_length = max(curr_length,max_length)
+#             while num in nums:
+#                 num+=1
+#                 curr_length +=1
+#                 max_length = max(curr_length,max_length)
 
-        return max_length
-            
+#         return max_length
+        
 # class Solution:
 
 #     def longestConsecutive(self, nums: List[int]) -> int:
@@ -57,6 +53,32 @@ class Solution:
 #             max_length = max(r-l+1,max_length)
 #             prev = nums[r]
 #             r+=1
+    
+class Solution:
+
+    def longestConsecutive(self, nums: List[int]) -> int:
+        
+        # prepare
+        l = 0
+        r = 1
+        prev = nums[l]
+        nums = sorted(set(nums))
+        # print('nums',nums)
+        max_length = 0
+        
+
+        while True:
+            if r == len(nums):
+                return max_length
+            
+            if prev+1!=nums[r]:
+                prev = nums[r]
+                l=r
+                r+=1
+                continue
+            max_length = max(r-l+1,max_length)
+            prev = nums[r]
+            r+=1
             
     
 if __name__=="__main__":
