@@ -12,12 +12,13 @@ class SegmentTree:
         # sum
         self.sum = sum
 
+    # O(n) 
     @staticmethod
     def build(nums,L,R):
 
         """
-        Every recursion purpose is to pass the value e.g. L, R
-        
+        since it is divide and conquer, its  purpose is to pass the value e.g. L, R and return the segment tree node
+        then go up  
         """
 
         # base case
@@ -31,8 +32,13 @@ class SegmentTree:
         root.sum = root.left.sum + root.right.sum
         return root
     
+    # O(logn)
     def update(self,index,val):
-        
+
+        """
+        since it is divide and conquer, its purpose is to modify when l = r == index and modify parent sum
+        then go up  
+        """
         # base case
         if index == self.L == self.R:
             self.sum =  val
@@ -47,6 +53,13 @@ class SegmentTree:
 
 
     def rangeQuery(self,L,R):
+
+        """
+        
+        since it is divide and conquer, its purpose is to  return in l = r 
+        then go up  
+        
+        """
         
         # base case
         if L == self.L and R==self.R:
