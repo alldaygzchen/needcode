@@ -50,6 +50,7 @@ class SegmentTree:
         else:
             self.left.update(index, val)
         self.sum = self.left.sum + self.right.sum
+        return
 
 
     def rangeQuery(self,L,R):
@@ -80,4 +81,12 @@ class SegmentTree:
 
         
 
+if __name__=="__main__":
+    mySegmentTree = SegmentTree.build([5,3,7,1,4,2],0,5)
+    # for x,y in [(0,5),(0,2),(3,5),(0,1),(2,2),(3,4),(5,5),(0,0),(1,1),(3,3),(4,4)]:
+    #     print(mySegmentTree.rangeQuery(x,y))
+    mySegmentTree.update(0,10)
+    for x,y in [(0,5),(0,2),(0,1),(0,0)]:
+        print(mySegmentTree.rangeQuery(x,y))
 
+    
