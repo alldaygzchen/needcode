@@ -111,6 +111,11 @@ https://docs.google.com/spreadsheets/d/1Z6BECY1EIo3ZLYON8f-YlHwo_QAH1yApBUlu8Qs1
 3. update, build, rangeQuery are all divide and conquer
 4. we store the value in the segment node for cache, so there is no need to go to the end
 
+## Iterative DFS
+
+1. inorder: if curr left or curr right is None, pop the stack
+2. preorder: if curr left, pop the stack
+
 # Depth First Search:
 
 1. bst traversal is inorder (left->node->right), time complexity:O(n)
