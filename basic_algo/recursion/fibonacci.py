@@ -81,10 +81,10 @@ def fibonacci_while_loop(target):
 
 if __name__=="__main__":
     print(fibonacci_dfs_divide_conquer(7))
-    # print(fibonacci_dfs_divide_conquer(8))
-    # print(fibonacci_dfs_divide_conquer(9))
-    # print(fibonacci_dp(7))
-    # print(fibonacci_dp(8))
-    # print(fibonacci_dp(9))
-    print(finonacci_recursion(7))
-    print(fibonacci_while_loop(7))
+    print(fibonacci_dfs_divide_conquer(8))
+    print(fibonacci_dfs_divide_conquer(9))
+    print(fibonacci_dp(7))
+    print(fibonacci_dp(8))
+    print(fibonacci_dp(9))
+    # print(finonacci_recursion(7))
+    # print(fibonacci_while_loop(7))

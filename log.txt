@@ -1,13 +1,8 @@
 # not done
-ongoing: 
 
 # advance algo
 
-and dfs solution
-segement tree
-iterative dfs
 two heaps
-permutations
 dijkstra 
 prim 
 kruskal 
@@ -16,3 +11,5 @@ topological sort
 unbounded knapsack
 lcs
 palindromes
+iterative dfs review (practice)
+segement tree(practice)

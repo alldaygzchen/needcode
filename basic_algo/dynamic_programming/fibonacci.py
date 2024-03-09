@@ -14,7 +14,7 @@ def fibonacci_memoization(n,cache):
     if n in cache:
         return cache[n]
     cache[n]=fibonacci_memoization(n-1,cache) +fibonacci_memoization(n-2,cache)
-    return cache[n]
+    return cache[n]# recall traversal n+1
 
 # dynamic programming
 

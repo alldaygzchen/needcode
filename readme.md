@@ -165,6 +165,13 @@ from sortedcontainers import SortedDict
 11. we can also use heap to sort array since remove is O(log(n)) thus O(nlog(n))
 12. heaps disadvantage: search, heap advantage: sort and min/max search
 
+# Advance heaps algorithm
+
+1. calculate median for unsorting array(nlog(n))
+2. considering array inserting a new value, it takes O(n) and finding the median is O(1)
+3. streaming value: inserting O(logn) and get median O(1)
+4. python does not have max heap (for small values)
+
 # Hashing
 
 1. treemap: insert:O(logn) remove:O(logn) search:O(logn) sorting:O(n)  
@@ -196,6 +203,7 @@ from sortedcontainers import SortedDict
 3. all dynamic programming call be transfer to memoization
 4. memoization is more suitable for more complex problems
 5. overall, dfs backtracking seems to have the worst time complexity
+6. dynamic ends at n+1,while memoization starts at n.
 
 # Bit manipulation
 
