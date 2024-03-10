@@ -56,34 +56,32 @@ def preorder(curr):
         else:
             curr = stack.pop()
 
+
 def postorder(curr):
 
     """
-    only right node will be in the stack where the priority follows the nearest curr right node
+    all node will be in the stack but there need to be an additional visit stack
     left -> right -> middle
 
     """
-    stack = [curr]
-    visit = [False]
+    stack = [[curr,False]]
 
     while True:
 
         if not stack:
             return 
         
-        curr, visited = stack.pop(), visit.pop()
+        curr, visited = stack.pop()
 
+        # if curr is None,we dont print and we do not go any further
         if curr:
             if visited:
                 print(curr.val)
 
             else:
-                stack.append(curr)
-                visit.append(True)
-                stack.append(curr.right)
-                visit.append(False)
-                stack.append(curr.left)
-                visit.append(False)
+                stack.append([curr,True])
+                stack.append([curr.right,False])
+                stack.append([curr.left,False])
 if __name__=="__main__":
     
     root = TreeNode(1,None,None)
@@ -97,3 +95,33 @@ if __name__=="__main__":
     preorder(root)
     print('postorder') #12435
     postorder(root) #42531
+
+# def postorder(curr):
+
+#     """
+#     all node will be in the stack but there need to be an additional visit stack
+#     left -> right -> middle
+
+#     """
+#     stack = [curr]
+#     visit = [False]
+
+#     while True:
+
+#         if not stack:
+#             return 
+        
+#         curr, visited = stack.pop(), visit.pop()
+
+#         if curr:
+#             if visited:
+#                 print(curr.val)
+
+#             else:
+#                 stack.append(curr)
+#                 visit.append(True)
+#                 stack.append(curr.right)
+#                 visit.append(False)
+#                 stack.append(curr.left)
+#                 visit.append(False)
+            

@@ -2,14 +2,13 @@
 
 # advance algo
 
-two heaps
-dijkstra 
 prim 
-kruskal 
 topological sort
 0/1 knapsack
 unbounded knapsack
 lcs
 palindromes
 iterative dfs review (practice)
-segement tree(practice)
+segment tree(practice)
+two heaps(practice)
+kruskal (practice)
