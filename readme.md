@@ -218,7 +218,7 @@ from sortedcontainers import SortedDict
 
 # Leetcode thought:
 
-1. consider step to step or recursive(backtracking or divide and conquer) [basic_algo\recursion\fibonacci.py]
+1. consider step to step or recursive(backtracking [preorder] or divide and conquer) [basic_algo\recursion\fibonacci.py]
 2. if recursive, consider a backtracking [exploring all solutions] or divide and conquer[overlapping subproblems] (since it is dfs, create the base case)
 3. if divide and conquer, consider the divide and conquer adding memoization or dp
 
