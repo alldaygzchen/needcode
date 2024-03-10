@@ -62,4 +62,12 @@ explore all the solutions, we use backtracking
 
 ```
 
+# two heaps template
+
+```
+1. create small value max heap and large value min heap
+2. insert and check length
+3. get median
+```
+
 # dynamic programming template

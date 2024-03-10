@@ -169,7 +169,7 @@ from sortedcontainers import SortedDict
 
 1. calculate median for unsorting array(nlog(n))
 2. considering array inserting a new value, it takes O(n) and finding the median is O(1)
-3. streaming value: inserting O(logn) and get median O(1)
+3. streaming value: 1.inserting O(logn) 2. check length and 3.get median O(1)
 4. python does not have max heap (for small values)
 
 # Hashing
@@ -195,6 +195,11 @@ from sortedcontainers import SortedDict
 8. Matrix Dfs: time complexity O(4^(n\*m)), space complexity:O(n\*m)
 9. two methods for matrix dfs: traversal and divide and conquer
 10. bfs has better time complexity since it does not duplicate unnecessary steps
+
+# Advance graphs algorithm
+
+1. Dijkstra: time complexity O(Elog(V^2))
+2. why greedy => optimal
 
 # Dynamic programming
 
