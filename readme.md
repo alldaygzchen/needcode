@@ -199,7 +199,9 @@ from sortedcontainers import SortedDict
 # Advance graphs algorithm
 
 1. Dijkstra: time complexity O(Elog(V^2))
-2. why greedy => optimal
+2. Prims: Find Minimum spanning Tree (connecting all the nodes (edges = nodes -1) without a cycle and minimize the total cost of the edges)
+3. time complexity: O(Elog(V^2)), space complexity:O(E)
+4. trees: undirected connected graph
 
 # Dynamic programming
 
