@@ -2,13 +2,7 @@
 
 # advance algo
 
-prim 
 topological sort
-0/1 knapsack
 unbounded knapsack
 lcs
 palindromes
-iterative dfs review (practice)
-segment tree(practice)
-two heaps(practice)
-kruskal (practice)

@@ -213,6 +213,10 @@ from sortedcontainers import SortedDict
 5. overall, dfs backtracking seems to have the worst time complexity
 6. dynamic ends at n+1,while memoization starts at n.
 
+# Advance Dynamic programming algorithm
+
+1. knapsack: skip or include
+
 # Bit manipulation
 
 1. base 10 (2)vs base 2 (...000010)e.g. 2
