@@ -216,6 +216,10 @@ from sortedcontainers import SortedDict
 # Advance Dynamic programming algorithm
 
 1. knapsack: skip or include
+2. unbounded knapsack: skip or include
+3. lcs:
+   - subsequence may not be continous comparing to subarray
+   - subsequence consider order while subset not
 
 # Bit manipulation
 
