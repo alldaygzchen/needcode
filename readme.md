@@ -211,7 +211,7 @@ from sortedcontainers import SortedDict
 3. all dynamic programming call be transfer to memoization
 4. memoization is more suitable for more complex problems
 5. overall, dfs backtracking seems to have the worst time complexity
-6. dynamic ends at n+1,while memoization starts at n.
+6. dynamic ends at n+1,while memoization starts at n.(Not really, here is an example in lcs.py)
 
 # Advance Dynamic programming algorithm
 
